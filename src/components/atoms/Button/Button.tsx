@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
-import type { MappedClassNames } from '../../types/class-names';
-import { mergeOptionalClassNameWithList } from '../../utils/class-names';
+import type { MappedClassNames } from '../../../types/class-names.ts';
+import { mergeOptionalClassNameWithList } from '../../../utils/class-names.ts';
 
 type ButtonProps = {
   children: ReactNode;

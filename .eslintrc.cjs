@@ -8,6 +8,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:tailwindcss/recommended',
+    'plugin:storybook/recommended',
     'prettier',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
