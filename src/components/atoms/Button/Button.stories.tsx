@@ -1,5 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { within, userEvent } from '@storybook/testing-library';
+
+import { expect } from '@storybook/jest';
+
 import { Button } from './Button.tsx';
 
 const meta = {
@@ -16,6 +20,14 @@ export default meta;
 export const Default: StoryObj<typeof meta> = {
   args: {
     children: 'Button',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+
+    await userEvent.click(button);
+
+    expect(button).toHaveFocus();
   },
 };
 
