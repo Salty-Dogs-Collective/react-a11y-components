@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { within, userEvent } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 
 import { expect } from '@storybook/jest';
 
+import { getLabelFromChildren } from '../../../utils/children.ts';
 import { Button } from './Button.tsx';
 
 const meta = {
@@ -21,13 +22,13 @@ export const Default: StoryObj<typeof meta> = {
   args: {
     children: 'Button',
   },
-  play: async ({ canvasElement }) => {
+  play: async ({ canvasElement, args }) => {
+    const user = userEvent.setup();
     const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
 
-    await userEvent.click(button);
+    await user.tab();
 
-    expect(button).toHaveFocus();
+    expect(canvas.getByRole('button', { name: getLabelFromChildren(args.children) })).toHaveFocus();
   },
 };
 
