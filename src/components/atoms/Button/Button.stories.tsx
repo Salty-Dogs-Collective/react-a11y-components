@@ -36,15 +36,22 @@ export const Default: StoryObj<typeof meta> = {
   args: {
     children: 'Button',
   },
-  play: async ({ canvasElement, args }) => {
+  play: async ({ canvasElement, step, args }) => {
     const user = userEvent.setup();
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button', { name: getLabelFromChildren(args.children) });
 
-    await user.hover(button);
-    await user.click(button);
+    // @TODO: hover doesn't work
+    await step('hover', async () => {
+      await user.hover(button);
+    });
 
-    expect(button).toHaveFocus();
+    // @TODO: separate stories for states
+    await step('click & focus', async () => {
+      await user.click(button);
+
+      expect(button).toHaveFocus();
+    });
   },
 };
 
