@@ -22,17 +22,17 @@ export const Button = ({
       'text-stone-900',
       'enabled:hover:text-white',
       'bg-red-500',
-      'dark:bg-red-600',
+      'dark:bg-sky-600',
       'enabled:hover:bg-red-700',
-      'enabled:focus:ring-red-400',
+      'enabled:focus:ring-sky-400',
     ],
     secondary: [
       'text-slate-900',
       'enabled:hover:text-white',
       'bg-sky-500',
-      'dark:bg-sky-600',
+      'dark:bg-red-600',
       'enabled:hover:bg-sky-700',
-      'enabled:focus:ring-sky-400',
+      'enabled:focus:ring-red-400',
     ],
   };
   const sizeClassNames: MappedClassNames<NonNullable<ButtonProps['size']>> = {
