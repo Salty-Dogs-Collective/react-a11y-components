@@ -63,7 +63,5 @@
   "volta": {
     "node": "20.10.0",
     "pnpm": "8.11.0"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "@sdc/react-a11y-components@0.0.0"
+  }
 }
