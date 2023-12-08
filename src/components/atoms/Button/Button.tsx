@@ -23,7 +23,7 @@ export const Button = ({
       'enabled:hover:text-white',
       'bg-red-500',
       'dark:bg-red-600',
-      'enabled:hover:bg-sky-700',
+      'enabled:hover:bg-red-700',
       'enabled:focus:ring-red-400',
     ],
     secondary: [
@@ -31,7 +31,7 @@ export const Button = ({
       'enabled:hover:text-white',
       'bg-sky-500',
       'dark:bg-sky-600',
-      'enabled:hover:bg-red-700',
+      'enabled:hover:bg-sky-700',
       'enabled:focus:ring-sky-400',
     ],
   };
