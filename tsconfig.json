@@ -18,7 +18,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "exactOptionalPropertyTypes": true,
-    "types": ["vitest/importMeta", "testing-library__jest-dom"]
+    "types": ["vitest/importMeta"]
   },
   "include": ["src"],
   "references": [
